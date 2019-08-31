@@ -171,6 +171,8 @@ namespace WSClient
                 httpClientHandler.ServerCertificateCustomValidationCallback = (message, certificate, chain, errors) => {
                     Console.WriteLine("HTTP Request Headers: " + message.Headers);
                     Console.WriteLine("Remote Server Identity: " + certificate.Subject);
+                    // To disable SSL validation return true.
+                    // return true;
                     return certificate.Equals(serverCertificate);
                 };
                 using (var client = new HttpClient(httpClientHandler))

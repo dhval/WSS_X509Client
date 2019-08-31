@@ -20,7 +20,7 @@ A dotnet core WS-Security client for signing SOAP message with X.509 Certificate
 - client certificate/key : Used to sign the SOAP Body
 - certificate password : The password for the client key
 - server certificate : Validate server certificate before establishing TLS session.
-- source xml : The XML request that needs to be wrapped in SOAP Body.
+- source xml : The XML request that will be wrapped in SOAP Body.
 
 
 #### Executing Client
@@ -31,5 +31,20 @@ Must be absolute path to the settings file for cross platform compatibility.
  dotnet run --project WSSClient.csproj /Users/dhval/WSSClient/appsettings.json 
 
  dotnet run --project WSSClient.csproj "c:/Users/dhval/WSSClient/appsettings.json" 
-
 ```
+
+
+#### [WS-Security X.509 Certificate Token Profile](https://www.ibm.com/support/knowledgecenter/en/SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/cwbs_binarysectokenx509.html)
+
+- WS-Security X.509 Certificate Token Profile is an OASIS specification that
+ describes the profile (specific mechanisms and procedures) on how the
+ "BinarySecurityToken" element defined in WS-Security standard can be used to
+ include X.509 certificate as a means of identifying the sender of a SOAP message
+ to the receiver.
+
+- An X.509 Certificate is a binding of a public key and its owner certified by
+ a Certificate Authority (CA). It can be used to authenticate the certificate
+ owner if the CA can be trusted..
+
+Here is a SOAP request message example that contains a wsse:BinarySecurityToken
+ element containing an X.509 certificate.
