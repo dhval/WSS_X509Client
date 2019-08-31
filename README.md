@@ -21,3 +21,15 @@ A dotnet core WS-Security client for signing SOAP message with X.509 Certificate
 - certificate password : The password for the client key
 - server certificate : Validate server certificate before establishing TLS session.
 - source xml : The XML request that needs to be wrapped in SOAP Body.
+
+
+#### Executing Client
+
+Must be absolute path to the settings file for cross platform compatibility.
+
+```
+ dotnet run --project WSSClient.csproj /Users/dhval/WSSClient/appsettings.json 
+
+ dotnet run --project WSSClient.csproj "c:/Users/dhval/WSSClient/appsettings.json" 
+
+```
