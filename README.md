@@ -34,7 +34,7 @@ Must be absolute path to the settings file for cross platform compatibility.
 ```
 
 
-#### [WS-Security X.509 Certificate Token Profile](https://www.ibm.com/support/knowledgecenter/en/SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/cwbs_binarysectokenx509.html)
+#### [WS-Security X.509 Certificate Token Profile](http://docs.oasis-open.org/wss-m/wss/v1.1.1/wss-x509TokenProfile-v1.1.1.html)
 
 - WS-Security X.509 Certificate Token Profile is an OASIS specification that
  describes the profile (specific mechanisms and procedures) on how the
