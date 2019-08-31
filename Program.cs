@@ -1,14 +1,19 @@
 ﻿using System;
 using System.IO;
-using System.Net;
 using System.Net.Http;
-using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using Microsoft.Extensions.Configuration;
+
+/*
+ * The material embodied in this software is provided to you "as-is" and without warranty of any kind, express,
+ * implied or otherwise, including without limitation, any warranty of fitness for a particular purpose. 
+ *
+ * Copyright (c) 2018 - Dhval Mudawal
+ */
 
 namespace WSClient
 {
@@ -152,7 +157,7 @@ namespace WSClient
                 System.Environment.Exit(1);
             }
             config = new ConfigurationBuilder().SetBasePath(Path.GetDirectoryName(configFile)).AddJsonFile(Path.GetFileName(configFile), true, true).Build();
-            String srcXML = config["source-xml"];
+            String srcXML = config["base-path"] + config["source-xml"];
             if (args.Length>1 && File.Exists(args[1])) {
                 srcXML = args[1];
             }
@@ -160,8 +165,8 @@ namespace WSClient
             Console.WriteLine("App Version: " + config["version"]);
             Console.WriteLine("Current Directoty = " + System.IO.Directory.GetCurrentDirectory());
             Uri uri = new Uri(config["endpoint"]); 
-            X509Certificate2 clientCertificate = new X509Certificate2(config["client-certificate"], config["certificate-password"], X509KeyStorageFlags.PersistKeySet);
-            X509Certificate2 serverCertificate = new X509Certificate2(config["server-certificate"]);
+            X509Certificate2 clientCertificate = new X509Certificate2(config["base-path"] + config["client-certificate"], config["certificate-password"], X509KeyStorageFlags.PersistKeySet);
+            X509Certificate2 serverCertificate = new X509Certificate2(config["base-path"] + config["server-certificate"]);
             String envelope = createSOAPRequest(srcXML, clientCertificate);
 
    

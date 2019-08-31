@@ -7,8 +7,9 @@ A dotnet core WS-Security client for signing SOAP message with X.509 Certificate
 ```
 {
   "version": "1.0",
-  "endpoint": "https://ws.gateway.org/Information",
+  "endpoint": "https://ws.x509.gateway.org/Information",
   "SOAPAction": "",
+  "base-path": "/path/to/other/files/",
   "client-certificate": "client.pfx",
   "server-certificate": "server.cer",
   "certificate-password": "certpwd",
@@ -18,6 +19,7 @@ A dotnet core WS-Security client for signing SOAP message with X.509 Certificate
 
 - endpoint : The webservice url
 - client certificate/key : Used to sign the SOAP Body
+- base path : Directory where all files reside, ending with '/'
 - certificate password : The password for the client key
 - server certificate : Validate server certificate before establishing TLS session.
 - source xml : The XML request that will be wrapped in SOAP Body.
@@ -48,3 +50,11 @@ Must be absolute path to the settings file for cross platform compatibility.
 
 Here is a SOAP request message example that contains a wsse:BinarySecurityToken
  element containing an X.509 certificate.
+ 
+
+
+
+#### Disclaimer
+ The material embodied in this software is provided to you "as-is" and without warranty of any kind, express,
+ implied or otherwise, including without limitation, any warranty of fitness for a particular purpose. 
+ 
