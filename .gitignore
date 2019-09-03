@@ -41,9 +41,10 @@ bin/
 
 *.pfx
 *.cer
+cert/
 
 # custom files
 
+sample/
 *.xml
-appsettings.json
-launchSettings.json
+*.json
