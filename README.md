@@ -35,6 +35,7 @@ Must be absolute path to the settings file for cross platform compatibility.
  dotnet run --project WSSClient.csproj "c:/Users/dhval/WSSClient/appsettings.json" 
 ```
 
+[Specify Arguments in VS](https://github.com/dhval/WSS_X509Client/blob/master/docs/application_arguments.png)
 
 #### [WS-Security X.509 Certificate Token Profile](http://docs.oasis-open.org/wss-m/wss/v1.1.1/wss-x509TokenProfile-v1.1.1.html)
 
