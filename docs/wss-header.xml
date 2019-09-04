@@ -1,0 +1,33 @@
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<s:Header>
+		<o:Security xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+			<u:Timestamp u:Id="_0">
+				<u:Created>2019-09-04T15:54:53.648Z</u:Created>
+				<u:Expires>2019-09-04T15:59:53.648Z</u:Expires>
+			</u:Timestamp>
+			<o:BinarySecurityToken EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" u:Id="uuid-430a6973-212a-4435-aec1-e16ef1f733ba-1">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</o:BinarySecurityToken>
+			<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+				<SignedInfo>
+					<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+					<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+					<Reference URI="#_0">
+						<Transforms>
+							<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+						</Transforms>
+						<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+						<DigestValue>gr5I8N5htiqaSaaqUn/FmhRIfic=</DigestValue>
+					</Reference>
+				</SignedInfo>
+				<SignatureValue>G94HypAGhoqpkOX0zNzLCuB16zyr2R1rpy8+EHTGYzvr4w7IRSrTLjyLvi6mZiag9arhacQxSodW/cXwNdQrxUPEcOP6SH9+++kDDtE5/51zmqR95V9Q/WTTWkF6YvU5akNOx5aAtoRUIl3ScK0/XwINK50o1047y3Fylnj6HtmDNOsZAeR8VcEIqTHNRxasgezdHmzl8QX5FPqCyQkN9RZ80seJPC83pRPcDtdQkvhggxg/2ygMiNiPdCYyfwB6UKhwW79NeWxL0thSs8yezd9L5GrxoF8OeGqowdc3rEu/qFGgp8hhshDShMM/hWGzIQ2c25uKZcgXmq1z5t6aVg==</SignatureValue>
+				<KeyInfo>
+					<o:SecurityTokenReference>
+						<o:Reference URI="#uuid-430a6973-212a-4435-aec1-e16ef1f733ba-1" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"/>
+					</o:SecurityTokenReference>
+				</KeyInfo>
+			</Signature>
+		</o:Security>
+	</s:Header>
+	<s:Body>
+	<!-- Your XML Body -->
+	</s:Body>
+</s:Envelope>
