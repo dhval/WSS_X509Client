@@ -57,6 +57,11 @@ Here is a SOAP request message example that contains a wsse:BinarySecurityToken
 
 [Sample WS-Security Header](https://github.com/dhval/WSS_X509Client/blob/master/docs/wss-header.xml)
 
+References
+
+- [SignedXml](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.xml.signedxml)
+- [X509Certificate2](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificate2)
+
 
 #### Disclaimer
  The material embodied in this software is provided to you "as-is" and without warranty of any kind, express,
